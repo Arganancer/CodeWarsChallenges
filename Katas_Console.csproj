@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Code\Completed\1 Kyu\" />
-    <Folder Include="Code\MyKatas\" />
+    <Compile Remove="Code\Completed\1 Kyu\**" />
+    <Compile Remove="Code\MyKatas\**" />
+    <EmbeddedResource Remove="Code\Completed\1 Kyu\**" />
+    <EmbeddedResource Remove="Code\MyKatas\**" />
+    <None Remove="Code\Completed\1 Kyu\**" />
+    <None Remove="Code\MyKatas\**" />
   </ItemGroup>
 
 </Project>
