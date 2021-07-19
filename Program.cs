@@ -6,18 +6,13 @@ namespace Codewars
 	{
 		private static void Main( string[] args )
 		{
+			Console.SetWindowSize( 110, 20 );
 			Console.BufferHeight = 8000;
-			Console.SetWindowSize( 100, 40 );
 
-			Console.WriteLine( Finder.PathFinder( "......\n" +
-			                                      "......\n" +
-			                                      "......\n" +
-			                                      "......\n" +
-			                                      "......\n" +
-			                                      "......" ) );
+			Console.WriteLine( JomoPipi.StringFunc( "]QfvDJUpxe", 775607689 ) );
 
 			Console.ForegroundColor = ConsoleColor.White;
-			Console.WriteLine( "++ All tests executed." );
+			Console.WriteLine( "\n\n++ All tests executed." );
 			Console.Read();
 		}
 	}
