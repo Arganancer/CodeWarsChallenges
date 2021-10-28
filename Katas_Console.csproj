@@ -14,5 +14,11 @@
     <None Remove="Code\Completed\1 Kyu\**" />
     <None Remove="Code\MyKatas\**" />
   </ItemGroup>
+	
+
+  <ItemGroup>
+    <PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
+    <PackageReference Include="System.Reflection.Emit.ILGeneration" Version="4.7.0" />
+  </ItemGroup>
 
 </Project>
