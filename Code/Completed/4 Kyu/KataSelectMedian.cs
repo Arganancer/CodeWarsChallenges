@@ -151,7 +151,7 @@ public interface IWarrior
 /// <summary>
 /// I know, I know... I cheated.
 /// </summary>
-public static class Kata
+public static class Kata1
 {
   internal static T GetInstanceFieldValue<T>(object instance, string fieldName)
   {
