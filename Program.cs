@@ -1,28 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Codewars
 {
+	/// <summary>
+	/// 
+	/// </summary>
 	internal class Program
 	{
-		private static void Main( string[] args )
+		static void Main()
 		{
-			Console.BufferHeight = 8000;
-			Console.SetWindowSize( 100, 40 );
+			Console.Write("Type Y to enter \"ToRoman\" Mode. Else, from roman mode: ");
+			bool toRoman = Console.ReadLine() == "Y";
+			if (toRoman)
+			{
+				while (true)
+				{
+					string userInput = Console.ReadLine();
+					if (!int.TryParse( userInput, out int value ))
+					{
+						return;
+					}
 
-			Type myType = typeof( object );
-			Dictionary<string, Type> properties = new Dictionary<string, Type> { { "SomeInt", typeof( int ) }, { "SomeString", typeof( string ) }, { "SomeObject", typeof( object ) } };
-			CreateClassAtRuntime.DefineClass( "SomeClass", properties, ref myType );
+					Console.WriteLine();
+					Console.Write( $"{value} = " );
+					Console.WriteLine( RomanNumerals.ToRoman( value ) );
+				}
+			}
+			else
+			{
+				while (true)
+				{
+					string userInput = Console.ReadLine();
 
-			dynamic myInstance = Activator.CreateInstance( myType );
-			myInstance.SomeObject = myInstance;
-			myInstance.SomeString = "Hey there";
-			myInstance.SomeInt = 3;
-			Console.WriteLine( $"{myInstance.SomeObject}: {myInstance.SomeString}, {myInstance.SomeInt}" );
-
-			Console.ForegroundColor = ConsoleColor.White;
-			Console.WriteLine( "++ All tests executed." );
-			Console.Read();
+					Console.WriteLine();
+					Console.Write( $"{userInput} = " );
+					Console.WriteLine( RomanNumerals.FromRoman( userInput ) );
+				}
+			}
 		}
 	}
 }
