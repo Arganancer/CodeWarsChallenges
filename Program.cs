@@ -1,4 +1,5 @@
 ﻿using System;
+using Code.Completed._5_Kyu;
 
 namespace Codewars
 {
@@ -9,34 +10,9 @@ namespace Codewars
 	{
 		static void Main()
 		{
-			Console.Write("Type Y to enter \"ToRoman\" Mode. Else, from roman mode: ");
-			bool toRoman = Console.ReadLine() == "Y";
-			if (toRoman)
-			{
-				while (true)
-				{
-					string userInput = Console.ReadLine();
-					if (!int.TryParse( userInput, out int value ))
-					{
-						return;
-					}
-
-					Console.WriteLine();
-					Console.Write( $"{value} = " );
-					Console.WriteLine( RomanNumerals.ToRoman( value ) );
-				}
-			}
-			else
-			{
-				while (true)
-				{
-					string userInput = Console.ReadLine();
-
-					Console.WriteLine();
-					Console.Write( $"{userInput} = " );
-					Console.WriteLine( RomanNumerals.FromRoman( userInput ) );
-				}
-			}
+			const int input = 379721;
+			Console.Write( $"Input: {input}" );
+			Console.WriteLine($"Result: {PrimeDecomp.factors( input )}");
 		}
 	}
 }
